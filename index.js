@@ -152,8 +152,8 @@ function removeFlavorByName(array, flavor){
         for (let i = 0; i < array.length ; i++ ){
             if (array[i] === flavor) {
                 array.splice(i,1);
+                return array;
             }
-            return array;
         }
 }
 
