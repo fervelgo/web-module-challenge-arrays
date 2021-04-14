@@ -90,22 +90,12 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(array){
-   array.unshift("Rainbow Sherbet");
-   console.log(array);
+function addFlavor(array, newFlavor){
+   array.unshift(newFlavor);
+   return array;
 }
 
-return addFlavors(originalFlavors);
-
-/* OR */
-
-function addFlavor(array){
-    const newFlavorArray = ['Rainbow Sherbet, ...array'];
-    console.log(newFlavorArray);
-}
-
-return addFlavor(originalFlavors);
-
+addFlavor(originalFlavors, "Rainbow Sherbet");
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Houston, we have a problem! There are now 32 flavors in the originalFlavors array! Your task is to remove an item from the end of the array. 
@@ -123,7 +113,7 @@ function removeLastFlavor(array){
     console.log(array);
  }
 
- removeFromLast(originalFlavors);
+ removeLastFlavor(originalFlavors);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -138,7 +128,7 @@ Use the getFlavorByIndex function below to do the following:
 */
 
 function getFlavorByIndex(array, index){
-    console.log(array[index]);
+    return array[index];
 }
 
 getFlavorByIndex(originalFlavors, 8);
@@ -160,10 +150,10 @@ Use the removeFlavorByName function below to do the following:
 
 function removeFlavorByName(array, flavor){
         for (let i = 0; i < array.length ; i++ ){
-            if (array[i] == flavor) {
+            if (array[i] === flavor) {
                 array.splice(i,1);
             }
-            console.log(array);
+            return array;
         }
 }
 
@@ -197,7 +187,7 @@ function filterByWord(array, filter){
         }
     }
 
-    console.log(filterArray);
+    return filterArray;
 }
 
 filterByWord(originalFlavors,"Chocolate");
@@ -215,7 +205,13 @@ Use the getAverageWordLength function below to do the following:
 */
 
 function getAverageWordLength(array){
-    /*code here*/
+    let sum = 0;
+    for (let i =0; i < array.length; i++) {
+        return array[i].split(" ").length;
+        
+    }
+    let average = sum/array.length;
+    return average;
 }
 
 
